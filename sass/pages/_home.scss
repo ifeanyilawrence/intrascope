@@ -1,0 +1,157 @@
+.section-partners {
+    padding: 8rem;
+    background-color: $color-greyish-white;
+
+    @include respond(phone) {
+        padding: 4rem 4rem 2rem 4rem;
+    }
+
+    &__partners {
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.section-services {
+    padding: 8rem 10rem;
+
+    @include respond(tab-land) {
+        padding: 2rem 5rem;
+    }
+
+    &__intro-text {
+        padding: 0 30rem;
+
+        @include respond(tab-land) {
+            padding: 0 10rem;
+        }
+
+        @include respond(phone) {
+            padding: 0 5rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 0 2rem;
+        }
+    }
+
+    &__services {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+        }
+    }
+}
+
+.section-news {
+    background-color: $color-greyish-white;
+    padding: 8rem 10rem;
+
+    @include respond(phone) {
+        padding: 3rem 5rem;
+    }
+
+    &__intro-text {
+        padding: 0 30rem;
+
+        @include respond(tab-land) {
+            padding: 0 10rem;
+        }
+
+        @include respond(phone) {
+            padding: 0 5rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 0 2rem;
+        }
+    }
+
+    &__news-box {
+        display: flex;
+        justify-content: space-around;
+
+        @include respond(tab-port) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.section-testimonial {
+    padding: 6rem 10rem;
+
+    @include respond(tab-port) {
+        padding: 3rem 6rem;
+    }
+
+    &__intro-text {
+        padding: 0 30rem;
+
+        @include respond(tab-land) {
+            padding: 0 1rem;
+        }
+
+        @include respond(phone) {
+            padding: 0 .5rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 0 .5rem;
+        }
+    }
+
+    &__testimonials {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        // @include respond(phone) {
+        //     flex-direction: column;
+        //     justify-content: space-between;
+        // }
+    }
+}
+
+.section-contact {
+    background-color: $color-white;
+    padding: 4rem 20rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        padding: 2rem 8rem;
+    }
+}
+
+.contact {
+    &__text {
+        color: $color-grey-dark;
+        text-transform: capitalize;
+        font-family: "MetropolisBlack";
+        font-size: 3.2rem;
+        line-height: 6rem;
+        animation: moveInLeft 1s ease-out;
+
+        @include respond(tab-land) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__btn {
+        align-self: center;
+
+        @include respond(tab-port) {
+        align-self: flex-start;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.section-header__contact {
+    height: 30vh;
+    padding: 6rem 8rem 0 8rem;
+    background-color: $color-white;
+    
+    @include respond(tab-land) {
+        height: 28vh;
+    }
+
+    @include respond(phone) {
+        padding: 6rem 8rem 0 8rem;
+        height: 32vh;
+    }
+
+    &__body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.section-contact-page {
+    min-height: 39vh;
+    padding: 6rem 18rem 3rem 18rem;
+    background-color: $color-greyish-white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include respond(tab-land) {
+        min-height: 48vh;
+    }
+
+    @include respond(tab-port) {
+        padding: 6rem 10rem 0 10rem;
+    }
+    
+    @include respond(phone) {
+        padding: 4rem 5rem 0 5rem;
+        min-height: 54vh;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .5);
+        width: 100%;
+        margin-bottom: 2rem;
+        display: block;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        }
+    }
+}

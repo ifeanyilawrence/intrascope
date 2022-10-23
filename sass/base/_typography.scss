@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'InterRegular';
+    /*a name to be used later*/
+    src: url('../../css/fonts/Inter-Regular.otf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: 'InterItalic';
+    /*a name to be used later*/
+    src: url('../../css/fonts/Inter-Italic.otf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: 'InterMedium';
+    /*a name to be used later*/
+    src: url('../../css/fonts/Inter-Medium.otf');
+    /*URL to font*/
+}
+
+body {
+    font-family: "InterRegular", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: capitalize;
+    font-family: "InterMedium", sans-serif;
+    font-size: 5.6rem;
+    line-height: 6.777rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    animation: moveInLeft 1s ease-out;
+
+    &--black {
+        color: $color-black;
+    }
+}
+
+.heading-secondary {
+    color: $color-black;
+    text-transform: capitalize;
+    font-family: "InterMedium", sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.026rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+
+    animation: moveInRight 1s ease-out;
+
+    &--white {
+        color: $color-white;
+    }
+}
+
+.heading-tertiary {
+    color: $color-black;
+    text-transform: capitalize;
+    font-family: "InterMedium", sans-serif;
+    font-size: 2.0rem;
+    line-height: 2.42rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+
+    animation: moveInRight 1s ease-out;
+
+    &--white {
+        color: $color-white;
+    }
+}

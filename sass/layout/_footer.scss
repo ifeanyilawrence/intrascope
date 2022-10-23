@@ -1,0 +1,120 @@
+.footer {
+    display: flex;
+    padding: 5rem 20rem;
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: $default-font-size;
+
+    @include respond(tab-port) {
+        padding: 4rem 10rem;
+    }
+
+    &__logo-box {
+        flex-basis: 35%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include respond(phone) {
+            flex-basis: 100%;
+        }
+    }
+
+    &__logo {
+        text-transform: capitalize;
+        font-family: "MetropolisBlack";
+        font-size: 3.5rem;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        &--1 {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-item {
+            margin: .8rem 0;
+
+            &--link {
+
+                &:link,
+                &:visited {
+                    display: inline-block;
+                    text-decoration: none;
+                    font-size: 1.7rem;
+                    color: $color-white;
+                    padding: .8rem .5rem;
+                    letter-spacing: 1px;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover,
+                &:active {
+                    font-weight: 900;
+                    transform: translateY(-.5rem);
+                }
+            }
+        }
+    }
+
+    &__social {
+        align-self: flex-end;
+
+        width: 12%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(tab-land) {
+            width: 18%;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        &--fb-link {
+            transition: all 0.3s ease;
+
+            &:hover,
+            &:active {
+                transform: translateY(-.5rem);
+            }
+        }
+
+        &--tw-link {
+            transition: all 0.3s ease;
+
+            &:hover,
+            &:active {
+                transform: translateY(-.5rem);
+            }
+        }
+
+        &--ig-link {
+            transition: all 0.3s ease;
+
+            &:hover,
+            &:active {
+                transform: translateY(-.5rem);
+            }
+        }
+    }
+}

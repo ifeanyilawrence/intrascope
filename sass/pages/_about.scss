@@ -1,0 +1,52 @@
+.section-header {
+    height: 30vh;
+    padding: 8rem 10rem 0 10rem;
+    background-color: $color-white;
+    
+    @include respond(tab-land) {
+        height: 28vh;
+    }
+
+    &__body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.section-about {
+    padding: 4rem 10rem;
+    background-color: $color-greyish-white;
+
+    @include respond(tab-land) {
+        padding: 2rem 5rem;
+    }
+
+    &__body {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+}
+
+.section-founders {
+    padding: 1rem 10rem 5rem 10rem;
+
+    @include respond(tab-land) {
+        padding: 1rem 5rem 5rem 5rem;
+    }
+
+    &__heading {
+        font-size: 2rem;
+    }
+
+    &__founders {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
