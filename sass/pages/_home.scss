@@ -1,157 +1,209 @@
-.section-partners {
-    padding: 8rem;
-    background-color: $color-greyish-white;
+.section-history {
+    padding: 4rem 4rem;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-around;
 
     @include respond(phone) {
         padding: 4rem 4rem 2rem 4rem;
     }
+}
 
-    &__partners {
+.history {
+    &__item {
+        align-self: center;
+        flex-basis: 30%;
+    }
+
+    &__shape {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-        @include respond(tab-port) {
-            flex-wrap: wrap;
-        }
+    &__logo {
+        padding-bottom: .6rem;
+    }
+
+    &__caption {
+        margin-bottom: .4rem !important;
+    }
+
+    &__text {
+        text-align: center;
     }
 }
 
-.section-services {
-    padding: 8rem 10rem;
+.section-service {
+    padding: 2rem 4rem;
+}
 
-    @include respond(tab-land) {
-        padding: 2rem 5rem;
-    }
-
+.service {
     &__intro-text {
-        padding: 0 30rem;
-
-        @include respond(tab-land) {
-            padding: 0 10rem;
-        }
-
-        @include respond(phone) {
-            padding: 0 5rem;
-        }
-
-        @include respond(small-phone) {
-            padding: 0 2rem;
-        }
+        display: flex;
+        justify-content: center;
     }
 
-    &__services {
+    &__body {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
 
         @include respond(tab-land) {
+            padding: 0rem 1rem;
             flex-direction: column;
         }
     }
-}
 
-.section-news {
-    background-color: $color-greyish-white;
-    padding: 8rem 10rem;
-
-    @include respond(phone) {
-        padding: 3rem 5rem;
-    }
-
-    &__intro-text {
-        padding: 0 30rem;
-
-        @include respond(tab-land) {
-            padding: 0 10rem;
-        }
-
-        @include respond(phone) {
-            padding: 0 5rem;
-        }
-
-        @include respond(small-phone) {
-            padding: 0 2rem;
-        }
-    }
-
-    &__news-box {
-        display: flex;
-        justify-content: space-around;
-
-        @include respond(tab-port) {
-            flex-wrap: wrap;
-        }
-    }
-}
-
-.section-testimonial {
-    padding: 6rem 10rem;
-
-    @include respond(tab-port) {
+    &__item {
+        align-self: center;
         padding: 3rem 6rem;
-    }
+        background: rgba(0, 0, 0, 0.5);
+        flex-basis: 30%;
+        border-radius: .4rem;
 
+        &-1 {
+            background-image: url("../img/products.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &-2 {
+            background-image: url("../img/services.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &-3 {
+            background-image: url("../img/material.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &--list {
+            color: $color-white;
+        }
+    }
+}
+
+.section-partners {
+    background-color: $color-primary;
+    padding: 2rem;
+}
+
+.partner {
     &__intro-text {
-        padding: 0 30rem;
-
-        @include respond(tab-land) {
-            padding: 0 1rem;
-        }
-
-        @include respond(phone) {
-            padding: 0 .5rem;
-        }
-
-        @include respond(small-phone) {
-            padding: 0 .5rem;
-        }
+        display: flex;
+        justify-content: center;
     }
 
-    &__testimonials {
+    &__body {
         display: flex;
         justify-content: space-around;
-        flex-wrap: wrap;
+    }
 
-        // @include respond(phone) {
-        //     flex-direction: column;
-        //     justify-content: space-between;
-        // }
+    &__heading {
+        color: $color-white !important;
     }
 }
 
-.section-contact {
-    background-color: $color-white;
-    padding: 4rem 20rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+.section-quote {
+    padding: 10rem 16rem;
 
     @include respond(tab-port) {
-        flex-direction: column;
-        padding: 2rem 8rem;
+        padding: 2rem 1rem;
     }
 }
 
-.contact {
-    &__text {
-        color: $color-grey-dark;
-        text-transform: capitalize;
-        font-family: "MetropolisBlack";
-        font-size: 3.2rem;
-        line-height: 6rem;
-        animation: moveInLeft 1s ease-out;
+.quote {
+    &__body {
+        padding-left: 4rem;
+        border-left: 4px solid $color-primary;
 
-        @include respond(tab-land) {
-            font-size: 2.2rem;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+    }
+
+    &__body {
+        &--text {
+            font-family: "InterItalic", sans-serif;
+            ;
+            font-weight: 200;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.4rem;
+            color: $color-quote;
+            padding-bottom: 2rem;
+        }
+
+        &--author {
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+
+            &-position {
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+            }
+        }
+    }
+}
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    &__header {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+
+        &--heading {
+            text-align: center;
+        }
+
+        &--text {
+            text-align: center;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &--text-input {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: .2rem;
+            border: 1px solid $color-primary;
+            outline: none;
+            width: 30%;
+            align-self: center;
+        }
+
+        &--text-area {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: .2rem;
+            border: 1px solid $color-primary;
+            outline: none;
+            width: 30%;
+            align-self: center;
         }
     }
 
     &__btn {
+        width: 30%;
         align-self: center;
-
-        @include respond(tab-port) {
-        align-self: flex-start;
-        }
+        text-align: center;
     }
 }

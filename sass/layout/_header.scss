@@ -1,6 +1,9 @@
 .header {
-    height: 75vh;
-    padding: 8rem 10rem 0 10rem;
+    height: 55vh;
+    background-image: url("../img/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @include respond(tab-land) {
         height: 75vh;
@@ -26,102 +29,13 @@
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-end;
         position: relative;
     }
-    
+
     &__text-section {
-        align-self: center;
-    }
-    
-    &__image-section {
-        align-self: flex-end;
-        
-        animation: moveInRight 2s ease-out;
-
-        @include respond(tab-port) {
-            // display: none;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-        }
-
-        @include respond(phone) {
-            display: none;
-        }
-    }
-
-    &-img {
-        width: 980px;
-        height: 580px;
-
-        @include respond(tab-desk) {
-            width: 680px;
-            height: 420px;
-        }
-
-        @include respond(tab-land) {
-            width: 500px;
-            height: 300px;
-        }
-
-        @include respond(tab-port) {
-            width: 400px;
-            height: 200px;
-        }
-    }
-    
-    &__btn {
-        margin-bottom: 6rem;
-    }
-
-    &__social {
-        width: 15%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @include respond(tab-desk) {
-            width: 20%;
-        }
-
-        @include respond(tab-land) {
-            width: 25%;
-        }
-
-        @include respond(tab-port) {
-            width: 35%;
-        }
-        @include respond(phone) {
-            width: 45%;
-        }
-
-        &--fb-link {
-            transition: all 0.3s ease;
-
-            &:hover,
-            &:active {
-                transform: translateY(-.5rem);
-            }
-        }
-
-        &--tw-link {
-            transition: all 0.3s ease;
-            
-            &:hover,
-            &:active {
-                transform: translateY(-.5rem);
-            }
-        }
-
-        &--ig-link {
-            transition: all 0.3s ease;
-            
-            &:hover,
-            &:active {
-                transform: translateY(-.5rem);
-            }
-        }
+        align-self: flex-start;
+        margin-left: 6rem;
     }
 }

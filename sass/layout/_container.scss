@@ -1,6 +1,12 @@
 .container {
-    width: 100%;
-    max-width: 1200px;
+    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
-    padding: 0 1rem;
+    position: relative;
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+
+    box-shadow: 0 0.5rem 2rem rgba($color-black, .1);
 }
