@@ -10,6 +10,11 @@
         height: 2rem;
     }
 
+    @include respond(tab-port) {
+        margin-top: 9rem;
+        height: 8rem;
+    }
+
     &__heading {
         align-self: center;
     }
@@ -21,6 +26,10 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+
+        @include respond(tab-port) {
+            padding: 1rem 1rem;
+        }
     }
 
     &__text {
@@ -128,11 +137,19 @@
 
         &--body {
             padding: 3rem 16rem;
+
+            @include respond(tab-port) {
+                padding: 2rem;
+            }
         }
 
         &--text {
             color: $color-white;
             width: 60%;
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
         }
     }
 
@@ -141,9 +158,24 @@
         display: flex;
         justify-content: space-between;
 
+        @include respond(tab-port) {
+            flex-direction: column;
+            padding: 2rem 4rem;
+        }
+
         &--image {
             align-self: center;
             padding-right: 4rem;
+
+            @include respond(tab-port) {
+                padding-right: 0rem;
+                align-self: flex-start;
+            }
+
+            &-img {
+                width: 280px !important;
+                height: 140px !important;
+            }
         }
 
         &--text {

@@ -8,11 +8,21 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
     &__item {
         flex: 30%;
         display: flex;
         justify-content: center;
         padding: 1rem;
+
+        @include respond(tab-port) {
+            flex: 90%;
+            width: 90%;
+            margin: 1rem;
+        }
 
         &:hover {
             transform: scale(1.1);

@@ -4,6 +4,10 @@
     display: flex;
     justify-content: space-around;
 
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
     &__text {
         align-self: center;
         display: flex;
@@ -17,15 +21,27 @@
         &>.footer__social {
             margin-top: 2rem;
         }
+
+        @include respond(tab-port) {
+            display: none;
+        }
     }
 }
 
 .contact-input {
     width: 100%;
+
+    @include respond(tab-port) {
+        width: 80%;
+    }
 }
 
 .form {
     &__body {
         width: 100%;
+
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+        }
     }
 }

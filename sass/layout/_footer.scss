@@ -109,7 +109,8 @@
         width: 20px;
 
         @include respond(tab-port) {
-            margin-left: -49px;
+            margin-left: -50px;
+            margin-bottom: 2rem;
         }
 
         &,
