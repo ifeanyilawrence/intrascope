@@ -1,0 +1,24 @@
+.projects-section {
+    padding: 2rem 4rem;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__item {
+        flex: 30%;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all .2s;
+        }
+
+        &--image {}
+    }
+}

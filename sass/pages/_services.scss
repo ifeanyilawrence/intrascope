@@ -1,0 +1,36 @@
+.section-form-services {
+    margin-bottom: 4rem;
+}
+
+.services-section {
+    padding: 4rem;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__item {
+        padding: 2rem;
+        display: flex;
+        flex: 50%;
+        justify-content: space-between;
+
+        &--image {
+            padding-right: 1rem;
+        }
+
+        &--text {
+            justify-self: center;
+            // align-self: center;
+
+            &-paragraph {
+                color: $color-quote;
+                text-align: justify;
+                margin-top: 3rem;
+            }
+        }
+    }
+}
