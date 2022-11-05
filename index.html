@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <title>Intrascope</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
         <header class="header">
             <div class="header__body">
                 <div class="header__text-section">
-                    <h4 class="heading-primary">
+                    <h4 class="heading-primary animate__bounce">
                         Perfection is our goal
                     </h4>
                     <p class="header__paragraph">
@@ -49,22 +50,22 @@
             <section class="section-history">
                 <div class="history__item">
                     <figure class="history__shape">
-                        <img src="./img/global.svg" width="38px" height="38px" alt="Professionals" class="history__logo">
-                        <figcaption class="history__caption heading-tertiary">Area Served</figcaption>
+                        <img src="./img/global.svg" width="38px" height="38px" alt="Professionals" class="history__logo animate__rollIn">
+                        <figcaption class="history__caption heading-tertiary animate__zoomIn">Area Served</figcaption>
                     </figure>
-                    <p class="history__text">Country wide</p>
+                    <p class="history__text animate__bounce">Country wide</p>
                 </div>
                 <div class="history__item">
                     <figure class="history__shape">
-                        <img src="./img/clock.svg" width="38px" height="38px" alt="Professionals" class="history__logo">
-                        <figcaption class="history__caption heading-tertiary">Registered</figcaption>
+                        <img src="./img/clock.svg" width="38px" height="38px" alt="Professionals" class="history__logo animate__rollIn">
+                        <figcaption class="history__caption heading-tertiary animate__zoomIn">Registered</figcaption>
                     </figure>
                     <p class="history__text">1st February 2008</p>
                 </div>
                 <div class="history__item">
                     <figure class="history__shape">
-                        <img src="./img/house.svg" width="38px" height="38px" alt="Professionals" class="history__logo">
-                        <figcaption class="history__caption heading-tertiary">Started Operations</figcaption>
+                        <img src="./img/house.svg" width="38px" height="38px" alt="Professionals" class="history__logo animate__rollIn">
+                        <figcaption class="history__caption heading-tertiary animate__zoomIn">Started Operations</figcaption>
                     </figure>
                     <p class="history__text">117th November 2020</p>
                 </div>
@@ -73,11 +74,11 @@
             <!-- Section Service -->
             <section class="section-service">
                 <div class="service__intro-text">
-                    <h2 class="heading-secondary">What We Do</h2>
+                    <h2 class="heading-secondary animate__heartBeat">What We Do</h2>
                 </div>
                 <div class="service__body">
                     <div class="service__item service__item-1">
-                        <div class="heading-tertiary heading-tertiary--white">
+                        <div class="heading-tertiary heading-tertiary--white animate__fadeIn">
                             Our Products
                         </div>
                         <ul class="service__item--list">
@@ -89,7 +90,7 @@
                         </ul>
                     </div>
                     <div class="service__item service__item-2">
-                        <div class="heading-tertiary heading-tertiary--white">
+                        <div class="heading-tertiary heading-tertiary--white animate__fadeIn">
                             Our Services
                         </div>
                         <ul class="service__item--list">
@@ -101,7 +102,7 @@
                         </ul>
                     </div>
                     <div class="service__item service__item-3">
-                        <div class="heading-tertiary heading-tertiary--white">
+                        <div class="heading-tertiary heading-tertiary--white animate__fadeIn">
                             Material Handling
                         </div>
                         <ul class="service__item--list">
@@ -118,114 +119,143 @@
             <!-- Section Partners -->
             <section class="section-partners">
                 <div class="partner__intro-text">
-                    <h2 class="heading-secondary partner__heading">Partners</h2>
+                    <h2 class="heading-secondary partner__heading animate__bounce">Partners</h2>
                 </div>
                 <div class="partner__body">
-                    <figure class="partner__image">
-                        <img src="./img/ctt.png" width="180px" height="130px" alt="" class="partner__image--img">
-                    </figure>
+                    <div class="slider">
+                        <div class="slide-track">
+                            <div class="partner__image">
+                                <img src="./img/ctt.png" width="180px" height="130px" alt="" class="partner__image--img">
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </section>
 
             <!-- Section Form -->
             <section class="section-form">
                 <div class="form__header">
-                    <h2 class="heading-secondary form__header--heading">Have a project in mind?</h2>
+                    <h2 class="heading-secondary form__header--heading animate__fadeIn">Have a project in mind?</h2>
                     <p class="form__header--text">Just provide some preliminary information and our team will contact you as soon as possible.</p>
                 </div>
                 <div class="form__body">
-                    <input type="text" class="form__body--text-input" placeholder="Your Name*">
-                    <input type="text" class="form__body--text-input" placeholder="Email Address*">
-                    <textarea name="description" id="description" cols="30" rows="5" class="form__body--text-area" placeholder="Describe your project*"></textarea>
-                    <a href="" class="btn btn--primary form__btn">Submit</a>
+                    <input type="text" id="sender-name" required class="form__body--text-input" placeholder="Your Name*">
+                    <input type="email" id="sender-email" required class="form__body--text-input" placeholder="Email Address*">
+                    <textarea name="email-body" id="email-body" required cols="30" rows="5" class="form__body--text-area" placeholder="Describe your project*"></textarea>
+                    <a onclick="openEmailClient()" class="btn btn--primary form__btn">Submit</a>
                 </div>
             </section>
 
             <!-- Section quotes -->
             <section class="section-quote">
-                <div class="quote__body">
+                <div class="quote__body quote-slides">
                     <p class="quote__body--text">
-                        <q>We are a team of professionals who are passionate about what we do. 
-                            We are committed to providing the best services to our clients."
+                        <q>Intrascope Nigeria ltd is a Total Engineering Company with Distinctive Competence and Knowledge in the field of Electro-mechanical Systems such as Elevators (Lifts), Overhead Travelling Cranes & Hoists, Industrial Un-interruptible Power Systems (UPS), Generators, Power Systems, Welding Machines, Data Centre Enclosures, Building Maintenance Units (Cleaning Cradles) as well as Mobile Shelving Systems.
+                            In these highly specialized fields, we represent and are associated with the best names worldwide.
                         </q>
                     </p>
                     <div class="quote__body--author">
-                        <p class="quote__body--author-name">- John Doe</p>
+                        <p class="quote__body--author-name">- Oludotun Majekodunmi</p>
                         <p class="quote__body--author-position">CEO</p>
                     </div>
                 </div>
+                <div class="quote__body quote-slides">
+                    <p class="quote__body--text">
+                        <q>
+                            You shouldn't dream your film, you should make it! ... Nothing will work unless you do.                   
+                        </q>
+                    </p>
+                    <div class="quote__body--author">
+                        <p class="quote__body--author-name">- Fatoki Temiloluwa</p>
+                        <p class="quote__body--author-position">Software Developer, Intrascope</p>
+                    </div>
+                </div>
+                <div class="quote__body quote-slides">
+                    <p class="quote__body--text">
+                        <q>
+                            Success usually comes to those that are busy looking for it.                  
+                        </q>
+                    </p>
+                    <div class="quote__body--author">
+                        <p class="quote__body--author-name">- Engr. Oludotun Majekodunmi</p>
+                        <p class="quote__body--author-position">FNSE, FNISafetyE, Founder & CEO</p>
+                    </div>
+                </div>
             </section>
-
-            <!-- footer -->
-            <footer class="footer">
-                <div class="footer__body">
-                    <div class="footer__logo-section">
-                        <div class="footer__logo">
-                            <img src="./img/logo.png" width="184px" height="170px" alt="logo" class="footer__logo--img">
-                        </div>
-                        <div class="footer__social">
-                            <a href="https://facebook.com/Intrascope" class="footer__social--fb-link"><img src="./img/fb.svg" alt="facebook" class="footer__social--fb-img"></a>
-                            <a href="https://twitter.com/Intrascope" class="footer__social--tw-link"><img src="./img/twitter.svg" alt="twitter" class="footer__social--tw-img"></a>
-                            <a href="https://instagram.com/Intrascope" class="footer__social--ig-link"><img src="./img/ig.svg" alt="instagram" class="footer__social--ig-img"></a>
-                            <a href="https://linkedIn.com/Intrascope" class="footer__social--lk-link"><img src="./img/linedin.svg" alt="linkedin" class="footer__social--lk-img"></a>
-                        </div>
-                    </div>
-
-                    <div class="footer__map-section">
-                        <!-- add google map here -->
-                        <div class="footer-map">
-
-                        </div>
-                        <p class="footer__map-section--text">Subscribe to our newsletter for updates</p>
-                        <div class="footer__input-section">
-                            <input type="text" class="footer__map-section--input" placeholder="Email">
-                            <a href="" class="footer__btn">Subscribe</a>
-                        </div>
-                    </div>
-
-                    <div class="footer__list">
-                        <div class="footer__explore">
-                            <h4 class="footer__explore--heading heading-tertiary heading-tertiary--white">Explore</h4>
-                            <ul class="footer__explore--list">
-                                <li class="footer__explore--list-item"><a href="index.html" class="footer__explore--list-item--link">Home</a></li>
-                                <li class="footer__explore--list-item"><a href="about.html" class="footer__explore--list-item--link">About Us</a></li>
-                                <li class="footer__explore--list-item"><a href="services.html" class="footer__explore--list-item--link">Products & Services</a></li>
-                                <li class="footer__explore--list-item"><a href="projects.html" class="footer__explore--list-item--link">Clients & Projects</a></li>
-                                <li class="footer__explore--list-item"><a href="#" class="footer__explore--list-item--link">Resources</a></li>
-                            </ul>
-                        </div>
-    
-                        <div class="footer__contact">
-                            <h4 class="footer__contact--heading heading-tertiary heading-tertiary--white">Contact</h4>
-                            <ul class="footer__contact--list">
-                                <li class="footer__contact--list-item"><p class="footer__contact--list-item--introtext">For project enquiries contact:</p></li>
-                                <li class="footer__contact--list-item">
-                                    <img src="./img/sms.svg" width="24px" height="24px" alt="sms" class="footer__contact--list-item--img">
-                                    <p class="footer__contact--list-item--text">help@intrascopeng.com</p>
-                                </li>
-                                <li class="footer__contact--list-item">
-                                    <img src="./img/call.svg" width="24px" height="24px" alt="call" class="footer__contact--list-item--img">
-                                    <p class="footer__contact--list-item--text">+234 802 318 9509</p>
-                                </li>
-                                <li class="footer__contact--list-item">
-                                    <img src="./img/call.svg" width="24px" height="24px" alt="call" class="footer__contact--list-item--img">
-                                    <p class="footer__contact--list-item--text">+234 806 932 4611</p>
-                                </li>
-                                <li class="footer__contact--list-item">
-                                    <img src="./img/location.svg" width="24px" height="24px" alt="location" class="footer__contact--list-item--img">
-                                    <p class="footer__contact--list-item--text">14 Osinowo street Medina Estate</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-    
-                <div class="footer__copyright">
-                    <p class="footer__copyright--text">&copy; 2022 Intrascope ltd.</p>
-                </div>
-            </footer>
         </main>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer__body">
+                <div class="footer__logo-section">
+                    <div class="footer__logo">
+                        <img src="./img/logo.png" width="184px" height="170px" alt="logo" class="footer__logo--img">
+                    </div>
+                    <div class="footer__social">
+                        <a href="https://facebook.com/Intrascope" class="footer__social--fb-link"><img src="./img/fb.svg" alt="facebook" class="footer__social--fb-img"></a>
+                        <a href="https://twitter.com/Intrascope" class="footer__social--tw-link"><img src="./img/twitter.svg" alt="twitter" class="footer__social--tw-img"></a>
+                        <a href="https://instagram.com/Intrascope" class="footer__social--ig-link"><img src="./img/ig.svg" alt="instagram" class="footer__social--ig-img"></a>
+                        <a href="https://linkedIn.com/Intrascope" class="footer__social--lk-link"><img src="./img/linedin.svg" alt="linkedin" class="footer__social--lk-img"></a>
+                    </div>
+                </div>
+
+                <div class="footer__map-section">
+                    <!-- add google map here -->
+                    <div class="footer-map" id="map">
+
+                    </div>
+                    <p class="footer__map-section--text">Subscribe to our newsletter for updates</p>
+                    <div class="footer__input-section">
+                        <input type="text" class="footer__map-section--input" placeholder="Email">
+                        <a onclick="openEmailClient()" class="footer__btn">Subscribe</a>
+                    </div>
+                </div>
+
+                <div class="footer__list">
+                    <div class="footer__explore">
+                        <h4 class="footer__explore--heading heading-tertiary heading-tertiary--white">Explore</h4>
+                        <ul class="footer__explore--list">
+                            <li class="footer__explore--list-item"><a href="index.html" class="footer__explore--list-item--link">Home</a></li>
+                            <li class="footer__explore--list-item"><a href="about.html" class="footer__explore--list-item--link">About Us</a></li>
+                            <li class="footer__explore--list-item"><a href="services.html" class="footer__explore--list-item--link">Products & Services</a></li>
+                            <li class="footer__explore--list-item"><a href="projects.html" class="footer__explore--list-item--link">Clients & Projects</a></li>
+                            <li class="footer__explore--list-item"><a href="#" class="footer__explore--list-item--link">Resources</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__contact">
+                        <h4 class="footer__contact--heading heading-tertiary heading-tertiary--white">Contact</h4>
+                        <ul class="footer__contact--list">
+                            <li class="footer__contact--list-item"><p class="footer__contact--list-item--introtext">For project enquiries contact:</p></li>
+                            <li class="footer__contact--list-item">
+                                <img src="./img/sms.svg" width="24px" height="24px" alt="sms" class="footer__contact--list-item--img">
+                                <p class="footer__contact--list-item--text">help@intrascopeng.com</p>
+                            </li>
+                            <li class="footer__contact--list-item">
+                                <img src="./img/call.svg" width="24px" height="24px" alt="call" class="footer__contact--list-item--img">
+                                <p class="footer__contact--list-item--text">+234 802 318 9509</p>
+                            </li>
+                            <li class="footer__contact--list-item">
+                                <img src="./img/call.svg" width="24px" height="24px" alt="call" class="footer__contact--list-item--img">
+                                <p class="footer__contact--list-item--text">+234 806 932 4611</p>
+                            </li>
+                            <li class="footer__contact--list-item">
+                                <img src="./img/location.svg" width="24px" height="24px" alt="location" class="footer__contact--list-item--img">
+                                <p class="footer__contact--list-item--text">14 Osinowo street Medina Estate</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__copyright">
+                <p class="footer__copyright--text">&copy; 2022 Intrascope ltd.</p>
+            </div>
+        </footer>
     </div>
+
+    <script src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALt8PqHpYUncu_yx3iZQNXcHh9gKKEbnY&callback=initMap"></script>
 </body>
 </html>

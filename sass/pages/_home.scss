@@ -19,6 +19,11 @@
             flex-basis: 100%;
             padding-bottom: 4rem;
         }
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
     }
 
     &__shape {
@@ -30,6 +35,7 @@
 
     &__logo {
         padding-bottom: .6rem;
+        animation: moveInBottom 1s ease-out .5s;
     }
 
     &__caption {
@@ -55,11 +61,6 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-
-        @include respond(tab-land) {
-            padding: 0rem 1rem;
-            flex-direction: column;
-        }
     }
 
     &__item {
@@ -74,6 +75,11 @@
             flex-basis: 100%;
             width: 100%;
             padding: 2rem 4rem;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease;
         }
 
         &-1 {
@@ -115,14 +121,60 @@
     }
 
     &__body {
-        display: flex;
-        justify-content: space-around;
+        // display: flex;
+        // justify-content: space-around;
+        width: 100%;
     }
 
     &__heading {
         color: $color-white !important;
     }
 }
+
+$animationSpeed: 10s;
+
+.slider {
+    height: 10rem;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::before,
+    &::after {
+        content: "";
+        height: 10rem;
+        position: absolute;
+        width: 25rem;
+        z-index: 2;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: 25rem;
+        margin-left: 84rem;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .slide {
+        height: 10rem;
+        width: 25rem;
+    }
+}
+
 
 .section-quote {
     padding: 10rem 16rem;
@@ -137,15 +189,15 @@
         padding-left: 4rem;
         border-left: 4px solid $color-primary;
 
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
+        animation-name: fade;
+        animation-duration: 1.5s;
+
+        min-height: 11rem;
     }
 
     &__body {
         &--text {
             font-family: "InterItalic", sans-serif;
-            ;
             font-weight: 200;
             font-size: 1.2rem;
             font-style: italic;

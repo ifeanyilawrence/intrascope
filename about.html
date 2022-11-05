@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <title>Intrascope</title>
 </head>
 <body>
@@ -31,7 +32,7 @@
         </nav>
 
         <header class="header-about">
-            <h4 class="heading-secondary heading-secondary--white header-about__heading">
+            <h4 class="heading-secondary heading-secondary--white header-about__heading animate__bounce">
                 About Us
             </h4>
         </header>
@@ -41,7 +42,7 @@
             <section class="history-about">
                 <div class="about__history">
                     <div class="about__text">
-                        <h4 class="heading-tertiary">
+                        <h4 class="heading-tertiary animate__slideInUp">
                             Intrascope Nigeria Limited
                         </h4>
                         <p class="about__paragraph--1">
@@ -86,26 +87,84 @@
                 </div>
                 <div class="about__safety">
                     <div class="about__safety--body">
-                        <h4 class="heading-tertiary heading-tertiary--white">Safety</h4>
+                        <h4 class="heading-tertiary heading-tertiary--white animate__fadeIn">Safety</h4>
                         <p class="about__safety--text">
                             We work closely with the people who rely on our products for their safe transportation and are strongly committed to safety. 
                             One of the ways by which we attain this goal is through continuous training of all concerned
                         </p>
                     </div>
                 </div>
-                <div class="about__gains">
-                    <div class="about__gains--image">
-                        <img src="./img/chooseus.png" alt="choose us" width="380px" height="230px" class="about__gains--image-img">
+                <div class="about__container">
+                    <div class="about__gains">
+                        <div class="about__gains--image">
+                            <img src="./img/chooseus.png" alt="choose us" width="380px" height="230px" class="about__gains--image-img">
+                        </div>
+                        <div class="about__gains--text">
+                            <h4 class="heading-tertiary">Why choose us</h4>
+                            <p class="about__gains--text-paragraph">
+                                Intrascope ltd is committed to helping its clients reach their goals, to personalising their event experiences, 
+                                to providing an innovative environment, and to making a difference. 
+                                Our strong sense of identification with client projects means that we are constantly striving to provide solutions, 
+                                even for issues they aren't yet aware of. To this end, we adopt a progressive approach to technology and marketing techniques.
+                            </p>
+                        </div>
                     </div>
-                    <div class="about__gains--text">
-                        <h4 class="heading-tertiary">Why choose us</h4>
-                        <p class="about__gains--text-paragraph">
-                            Intrascope ltd is committed to helping its clients reach their goals, to personalising their event experiences, 
-                            to providing an innovative environment, and to making a difference. 
-                            Our strong sense of identification with client projects means that we are constantly striving to provide solutions, 
-                            even for issues they aren't yet aware of. To this end, we adopt a progressive approach to technology and marketing techniques.
-                        </p>
+                    <div class="about__gains">
+                        <div class="about__gains--image">
+                            <img src="./img/services.png" alt="choose us" width="380px" height="230px" class="about__gains--image-img">
+                        </div>
+                        <div class="about__gains--text">
+                            <h4 class="heading-tertiary">How we work</h4>
+                            <p class="about__gains--text-paragraph">
+                                From design to manufacture, from installation to maintenance, 
+                                we endeavor to satisfy the clients' individual requirements. 
+                                Our nation-wide service networks, and well-trained engineering staff provides 
+                                the customers with perfect services according to fixed work standard wholeheartedly. 
+                                We have formulated and implemented a set of strict installation management process 
+                                and operation rules to ensure our customers rest at ease.
+                            </p>
+                        </div>
                     </div>
+                    <div class="about__gains">
+                        <div class="about__gains--image">
+                            <img src="./img/maintenance.png" alt="choose us" width="380px" height="230px" class="about__gains--image-img">
+                        </div>
+                        <div class="about__gains--text">
+                            <h4 class="heading-tertiary">Efficient maintenance</h4>
+                            <p class="about__gains--text-paragraph">
+                                The aim of our maintenance services is to keep our customers' equipment running smoothly and
+                                 eco-efficiently. Regular professional maintenance helps to prevent breakdowns and 
+                                 increases equipment lifetime. In addition to ensuring a long equipment lifetime 
+                                 we strive to provide our maintenance services in an eco-efficient way. 
+                                 We do this through for example: Route-planning technology to optimize technicians' driving routes, 
+                                 thereby reducing emissions.Wireless technology and remote monitoring solutions to provide technicians 
+                                 with real-time information, which enables better planned maintenance visits and reduces the number of unnecessary call-outs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__gains">
+                        <div class="about__gains--image">
+                            <img src="./img/trust.png" alt="choose us" width="380px" height="230px" class="about__gains--image-img">
+                        </div>
+                        <div class="about__gains--text">
+                            <h4 class="heading-tertiary">Trust us</h4>
+                            <p class="about__gains--text-paragraph">
+                                When you first heard about "INTRASCOPE", it might be only one word. 
+                                However it will become a new attitude to life from now on. Basing the technology, 
+                                internaltional advanced management, manufacturing and service platform, INTRASCOPE set up a full chain,
+                                 from product R&D, manufacture, sales, installation, maintenance and modernization for elevator & escalator. 
+                                 Guide you to a better life! "INTRASCOPE ltd, INTRASCOPE Better Life" is our mission. 
+                                 This will be realized not only by the workers who are manufacturing the elevators or engineers who are designing it, 
+                                 but also the passengers who are taking a ride of it. Technology-oriented objectives is what we are insisting in our elevators and 
+                                 escalators. Safety, protection, comfort are what we are considering. Parts testing before usgae is what we are doing. 
+                                 Intrascope ltd is becoming one of the leading elevator & escalator suppliers all around the world. Welcome to join us! 
+                                 Intrascope ltd, Intrascope Life!
+                            </p>
+                        </div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
                 </div>
             </section>
 
@@ -126,13 +185,13 @@
 
                     <div class="footer__map-section">
                         <!-- add google map here -->
-                        <div class="footer-map">
+                        <div class="footer-map" id="map">
 
                         </div>
                         <p class="footer__map-section--text">Subscribe to our newsletter for updates</p>
                         <div class="footer__input-section">
                             <input type="text" class="footer__map-section--input" placeholder="Email">
-                            <a href="" class="footer__btn">Subscribe</a>
+                            <a onclick="openEmailClient()" class="footer__btn">Subscribe</a>
                         </div>
                     </div>
 
@@ -179,5 +238,8 @@
             </footer>
         </main>
     </div>
+
+    <script src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALt8PqHpYUncu_yx3iZQNXcHh9gKKEbnY&callback=initMap"></script>
 </body>
 </html>

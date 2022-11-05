@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <title>Intrascope</title>
 </head>
 <body>
@@ -40,27 +41,36 @@
             <section class="projects-section">
                 <div class="projects">
                     <div class="projects__item">
-                        <img src="./img/project1.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project1.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">SOPELANA (ESPANA)</p>
                     </div>
                     <div class="projects__item">
-                        <img src="./img/project2.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project2.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">THONI 01 (AUSTRIA)</p>
                     </div>
                     <div class="projects__item">
-                        <img src="./img/project3.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project3.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">STERNRESIDENZ (AUSTRIA)</p>
                     </div>
                     <div class="projects__item">
-                        <img src="./img/project4.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project4.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">SPORTHOTEL IGLS 01 (AUSTRIA)</p>
                     </div><div class="projects__item">
-                        <img src="./img/project5.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project5.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">HOTEL QUELLENHOF (AUSTRIA)</p>
                     </div>
                     <div class="projects__item">
-                        <img src="./img/project6.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project6.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">PULL & BEAR (UK)</p>
                     </div><div class="projects__item">
-                        <img src="./img/project7.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project7.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">ALMACENERA CASA LLADRO 01 (ESPANA)</p>
                     </div><div class="projects__item">
-                        <img src="./img/project8.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project8.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">LONDON WALL 03 (UK)</p>
                     </div><div class="projects__item">
-                        <img src="./img/project9.png" alt="project" width="408px" height="264px" class="services__item--image-img">
+                        <img src="./img/project9.png" alt="project" width="408px" height="264px" class="projects__item--image">
+                        <p class="projects__item--txt">LONDON WALL 02 (UK)</p>
                     </div>
                 </div>
             </section>
@@ -82,13 +92,13 @@
 
                     <div class="footer__map-section">
                         <!-- add google map here -->
-                        <div class="footer-map">
+                        <div class="footer-map" id="map">
 
                         </div>
                         <p class="footer__map-section--text">Subscribe to our newsletter for updates</p>
                         <div class="footer__input-section">
                             <input type="text" class="footer__map-section--input" placeholder="Email">
-                            <a href="" class="footer__btn">Subscribe</a>
+                            <a onclick="openEmailClient()" class="footer__btn">Subscribe</a>
                         </div>
                     </div>
 
@@ -135,5 +145,8 @@
             </footer>
         </main>
     </div>
+
+    <script src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALt8PqHpYUncu_yx3iZQNXcHh9gKKEbnY&callback=initMap"></script>
 </body>
 </html>

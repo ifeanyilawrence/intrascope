@@ -7,7 +7,7 @@
     background-color: $color-primary;
 
     @include respond(tab-land) {
-        height: 2rem;
+        height: 9rem;
     }
 
     @include respond(tab-port) {
@@ -153,10 +153,27 @@
         }
     }
 
+    &__container {
+        padding: 10rem 18rem;
+        position: relative;
+
+        @include respond(tab-port) {
+            padding: 2rem 1rem;
+        }
+    }
+
     &__gains {
-        padding: 10rem 16rem;
         display: flex;
         justify-content: space-between;
+
+        min-height: 23.1rem;
+
+        @include respond(tab-port) {
+            min-height: 52rem;
+        }
+
+        animation-name: fade;
+        animation-duration: 1.5s;
 
         @include respond(tab-port) {
             flex-direction: column;
@@ -170,11 +187,13 @@
             @include respond(tab-port) {
                 padding-right: 0rem;
                 align-self: flex-start;
+                width: 100%;
             }
 
             &-img {
-                width: 280px !important;
-                height: 140px !important;
+                @include respond(tab-port) {
+                    width: 100%;
+                }
             }
         }
 
@@ -188,6 +207,48 @@
         }
     }
 }
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: $color-grey-dark;
+    font-weight: bold;
+    font-size: 1.8rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 10%;
+    border-radius: 3px 0 0 3px;
+
+    @include respond(tab-port) {
+        left: 1%;
+    }
+}
+
+.next {
+    right: 10%;
+    border-radius: 3px 0 0 3px;
+
+    @include respond(tab-port) {
+        right: 1%;
+    }
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: $color-quote;
+}
+
 
 .section-about {
     padding: 4rem 10rem;
